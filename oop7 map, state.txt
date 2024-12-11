@@ -1,0 +1,26 @@
+#include <iostream>
+#include <map>
+#include <string>
+using namespace std;
+
+int main() {
+    map<string, int> statePopulation = {
+        {"California", 39538223},
+        {"Texas", 29145505},
+        {"Florida", 21538187},
+        {"New York", 20201249},
+        {"Pennsylvania", 13002700}
+    };
+
+    string state;
+    cout << "Enter the name of a state: ";
+    cin >> state;
+
+    if (statePopulation.count(state)) {
+        cout << "Population of " << state << ": " << statePopulation[state] << endl;
+    } else {
+        cout << "State not found." << endl;
+    }
+
+    return 0;
+}
